@@ -52,3 +52,100 @@ Accurate segmentation of retinal structures is crucial for ophthalmic biomarker 
 - S²A-Net	98.64	81.23
 
 
+🚀 Quick Start
+Installation
+bash
+复制
+# Clone repo
+git clone https://github.com/yourname/S2A-Net.git
+cd S2A-Net
+
+# Create conda env (recommended)
+conda create -n s2anet python=3.8
+conda activate s2anet
+
+# Install dependencies
+pip install -r requirements.txt
+Data Preparation
+Download datasets from OCTA-500 and ROSE
+
+Organize folder structure:
+
+bash
+复制
+data/
+├── octa500/
+│   ├── train/
+│   │   ├── images/
+│   │   └── masks/
+│   └── test/
+│       ├── images/
+│       └── masks/
+└── rose/
+    ├── O/
+    ├── Z/
+    └── H/
+Training
+bash
+复制
+# Single GPU training
+python train.py --config configs/octa500.yaml --gpus 1
+
+# Multi-GPU training (example)
+python train.py --config configs/rose.yaml --gpus 4 --accelerator ddp
+Inference
+python
+复制
+from models import S2ANet
+
+# Load pretrained model
+model = S2ANet.load_from_checkpoint("checkpoints/best_model.ckpt")
+
+# Predict on OCTA image
+import cv2
+img = cv2.imread("sample.png", 0)  # Grayscale
+rv_mask, faz_mask = model.predict(img)
+
+# Visualization
+import matplotlib.pyplot as plt
+plt.imshow(img, cmap='gray')
+plt.imshow(rv_mask, alpha=0.5)  # Overlay RV prediction
+plt.show()
+📊 Performance Highlights
+Quantitative Results (Dice %)
+Dataset	Method	RV	FAZ
+OCTA-500	U-Net	88.23	95.69
+TransUNet	90.06	97.39
+S²A-Net	90.82	98.54
+ROSE-H	Joint-Seg	79.63	81.00
+S²A-Net	81.36	81.41
+FAZ Perivascular Performance
+Region Size	Method	Dice
+120×120 px	VAFF-Net	79.64
+S²A-Net	81.23
+Comparison Visualization
+
+📚 Citation
+If you use this work in your research, please cite:
+
+bibtex
+复制
+@inproceedings{s2anet2023,
+  title={Spatially Self-Aware Multitask Network for Joint Segmentation of Retinal Vasculature and Foveal Avascular Zone in OCTA Images},
+  author={Your Name and Co-authors},
+  booktitle={Medical Image Computing and Computer Assisted Intervention},
+  year={2023},
+  pages={1--11}
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Clinical Applications:
+
+Early detection of diabetic retinopathy 🩸
+
+Glaucoma progression monitoring 👁️
+
+Alzheimer's disease biomarkers 🧠
+
+Acknowledgments: This work was supported by [Your Funding Source] under Grant [XXXXXXX].
+
