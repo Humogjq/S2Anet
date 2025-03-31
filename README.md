@@ -36,15 +36,19 @@ Accurate segmentation of retinal structures is crucial for ophthalmic biomarker 
 
 
 ## 📊 Performance Highlights
-OCTA-500 Dataset
-Method	RV Dice (%)	FAZ Dice (%)
-U-Net	88.23	95.69
-TransUNet	90.06	97.39
-Joint-Seg	90.35	98.05
-S²A-Net	90.82	98.54
-FAZ Perivascular Region
-Method	OCTA-500	ROSE-H
-VAFF-Net	97.68	79.64
-S²A-Net	98.64	81.23
+
+- For OCTA-500 Dataset
+
+- Method	RV Dice (%)	FAZ Dice (%)
+- U-Net	88.23	95.69
+- TransUNet	90.06	97.39
+- Joint-Seg	90.35	98.05
+- S²A-Net	90.82	98.54
+
+- 
+- FAZ Perivascular Region
+- Method	OCTA-500	ROSE-H
+- VAFF-Net	97.68	79.64
+- S²A-Net	98.64	81.23
 
 
