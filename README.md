@@ -35,7 +35,7 @@ Accurate segmentation of retinal structures is crucial for ophthalmic biomarker 
   α = 0.1 + 0.8*sin(epoch_progress) + 0.1*(loss_ratio)  # Dynamic task weighting
 
 
-##📊 Performance Highlights
+## 📊 Performance Highlights
 OCTA-500 Dataset
 Method	RV Dice (%)	FAZ Dice (%)
 U-Net	88.23	95.69
