@@ -54,8 +54,7 @@ Accurate segmentation of retinal structures is crucial for ophthalmic biomarker 
 
 🚀 Quick Start
 Installation
-bash
-复制
+
 # Clone repo
 git clone https://github.com/yourname/S2A-Net.git
 cd S2A-Net
@@ -71,8 +70,6 @@ Download datasets from OCTA-500 and ROSE
 
 Organize folder structure:
 
-bash
-复制
 data/
 ├── octa500/
 │   ├── train/
@@ -95,7 +92,7 @@ python train.py --config configs/octa500.yaml --gpus 1
 python train.py --config configs/rose.yaml --gpus 4 --accelerator ddp
 Inference
 python
-复制
+
 from models import S2ANet
 
 # Load pretrained model
@@ -129,7 +126,7 @@ Comparison Visualization
 If you use this work in your research, please cite:
 
 bibtex
-复制
+
 @inproceedings{s2anet2023,
   title={Spatially Self-Aware Multitask Network for Joint Segmentation of Retinal Vasculature and Foveal Avascular Zone in OCTA Images},
   author={Your Name and Co-authors},
