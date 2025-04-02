@@ -11,8 +11,8 @@ Official implementation of **S²A-Net**, a unified CNN-Transformer framework for
 
 ## 📖 Introduction
 Accurate segmentation of retinal structures is crucial for ophthalmic biomarker analysis. Existing methods either:
-- ❌ **Independently** segment RV/FAZ (ignoring anatomical relationships)
-- ❌ Use **rigid joint-learning** (failing to balance task competition)
+-  **Independently** segment RV/FAZ (ignoring anatomical relationships)
+-  Use **rigid joint-learning** (failing to balance task competition)
 
 **Our Solution**:  
 **S²A-Net** introduces:
