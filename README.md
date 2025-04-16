@@ -56,7 +56,7 @@ Accurate segmentation of retinal structures is crucial for ophthalmic biomarker 
 Installation
 
 # Clone repo
-git clone https://github.com/yourname/S2A-Net.git
+git clone https://github.com/Humogjq/S2A-Net.git
 cd S2A-Net
 
 # Create conda env (recommended)
@@ -83,8 +83,7 @@ data/
     ├── Z/
     └── H/
 Training
-bash
-复制
+
 # Single GPU training
 python train.py --config configs/octa500.yaml --gpus 1
 
