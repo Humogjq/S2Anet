@@ -21,7 +21,7 @@ Accurate segmentation of retinal structures is crucial for ophthalmic biomarker 
 3. **Context-Aware Modules**: Task-specific feature refinement (LCEM/GCEM)
 
 **Key Advantages**:
-- 🏆 **91.82% RV Dice** | **98.54% FAZ Dice** on OCTA-500
+- 🏆 **90.82% RV Dice** | **98.54% FAZ Dice** on OCTA-500
 - ✨ Superior microvascular segmentation near FAZ boundaries
 - ⚡ Flexible integration with existing encoder-decoder architectures
 
